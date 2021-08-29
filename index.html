@@ -1,112 +1,177 @@
 <!--Personal modified startpage, original by Tayumpee-->
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>ジャスミン</title>
-        <!-- Javascripts -->
-		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-	</head>
-	<body>
-		<div class="maincontainer">
-			<div class="time" id="time">
-                <!-- real-time clock function -->
-				<script>
-					//document.getElementById("main").innerHTML = Date();
-					function updateClock() {
-						var days = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
-						var m = new Date();
-						var dateString =
-						  (days[ m.getDay() ]) + " " +
-						  ("0" + (m.getMonth()+1)).slice(-2) +"/"+
-						  ("0" + m.getDate()).slice(-2) + "/" +
-						  m.getFullYear() +" "+
-						  ("0" + m.getHours()).slice(-2) + ":" +
-						  ("0" + m.getMinutes()).slice(-2) + ":" +
-						  ("0" + m.getSeconds()).slice(-2);
-						
-						// set the content of the element with the ID time to the formatted string
-						document.getElementById('time').innerHTML = dateString;
+  <head>
+    <meta charset="UTF-8" />
+    <title>ジャスミン</title>
+    <!-- Javascripts -->
+    <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="maincontainer">
+      <div class="time" id="time">
+        <!-- real-time clock function -->
+        <script>
+          //document.getElementById("main").innerHTML = Date();
+          function updateClock() {
+            var days = [
+              "SUNDAY",
+              "MONDAY",
+              "TUESDAY",
+              "WEDNESDAY",
+              "THURSDAY",
+              "FRIDAY",
+              "SATURDAY",
+            ];
+            var m = new Date();
+            var dateString =
+              days[m.getDay()] +
+              " " +
+              ("0" + (m.getMonth() + 1)).slice(-2) +
+              "/" +
+              ("0" + m.getDate()).slice(-2) +
+              "/" +
+              m.getFullYear() +
+              " " +
+              ("0" + m.getHours()).slice(-2) +
+              ":" +
+              ("0" + m.getMinutes()).slice(-2) +
+              ":" +
+              ("0" + m.getSeconds()).slice(-2);
 
-						// call this function again in 1000ms
-						setTimeout(updateClock, 1000);
-					}
-					updateClock(); // initial call
-				</script>
-			</div>
-			<div class="main" id="main1">
-				<div class="sidebar" style="background-image: url(img/m1.gif);"></div>
-                <div class="welcome">ジャスミン</div>
-                <!-- Bookmarks container -->
-				<div class="bookmarkscontainer">
-                    <!-- Socials -->
-					<ul>
-						<li>
-                            <a href="https://messenger.com" class="clink" target="_self">messenger</a>
-                        </li>
-                        <li>
-                            <a href="https://gmail.com" class="clink" target="_self">gmail</a>
-                        </li>
-                        <li>
-                            <a href="https://old.reddit.com" class="clink" target="_self">reddit</a>
-                        </li>
-						<li>
-                            <a href="https://youtube.com" class="clink" target="_self">youtube</a>
-                        </li>
-						<li>
-                            <a href="https://open.spotify.com/" class="clink" target="_self">spotify</a>
-                        </li>
-                        <li>
-                            <a href='https://www.twitch.tv/' class='clink' target='_self'>twitch</a>
-                        </li>
-                    </ul>
-                    <!-- School stuff -->
-					<ul>
-						<li>
-                            <a href="https://github.com" class="clink" target="_self">github</a>
-                        </li>
-						<li>
-                            <a href="https://canvas.cpp.edu" class="clink" target="_self">canvas</a>
-                        </li>
-						<li>
-                            <a href="https://www.cpp.edu/broncodirect/index.shtml" class="clink" target="_self">broncodirect</a>
-                        </li>
-						<li>
-                            <a href="https://my.cpp.edu" class="clink" target="_self">mycpp</a>
-                        </li>
-						<li>
-                            <a href="https://outlook.office365.com" class="clink" target="_self">outlook</a>
-                        </li>
-                        <li>
-                            <a href='https://www.linkedin.com/' class='clink' target='_self'>linkedin</a>
-                        </li>
-                    </ul>
-                    <!-- keyboard stuff/misc -->
-					<ul>
-						<li>
-                            <a href="https://amazon.com" class="clink" target="_self">amazon</a>
-                        </li>
-						<li>
-                            <a href="https://old.reddit.com/r/buildapcsales/" class="clink"
-                            target="_self">r/buildapcsales</a>
-                        </li>
-						<li>
-                            <a href="https://old.reddit.com/r/FirefoxCSS/" class="clink" target="_self">r/firefoxcss</a>
-                        </li>
-						<li>
-                            <a href="https://old.reddit.com/r/MechanicalKeyboards/" class="clink" target="_self">r/mechanicalkeyboards</a>
-                        </li>
-						<li>
-                            <a href="https://old.reddit.com/r/mechmarket/" class="clink" target="_self">r/mechmarket</a>
-                        </li>
-                        <li>
-                            <a href='https://animekisa.tv/' class='clink' target='_self'>animekisa</a>
-                        </li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</body>
+            // set the content of the element with the ID time to the formatted string
+            document.getElementById("time").innerHTML = dateString;
+
+            // call this function again in 1000ms
+            setTimeout(updateClock, 1000);
+          }
+          updateClock(); // initial call
+        </script>
+      </div>
+      <div class="main" id="main1">
+        <div class="sidebar" style="background-image: url(img/m1.gif)"></div>
+        <div class="welcome">ジャスミン</div>
+        <!-- Bookmarks container -->
+        <div class="bookmarkscontainer">
+          <!-- Socials -->
+          <ul>
+            <li>
+              <a href="https://messenger.com" class="clink" target="_self"
+                >messenger</a
+              >
+            </li>
+            <li>
+              <a href="https://gmail.com" class="clink" target="_self">gmail</a>
+            </li>
+            <li>
+              <a href="https://old.reddit.com" class="clink" target="_self"
+                >reddit</a
+              >
+            </li>
+            <li>
+              <a href="https://youtube.com" class="clink" target="_self"
+                >youtube</a
+              >
+            </li>
+            <li>
+              <a href="https://open.spotify.com/" class="clink" target="_self"
+                >spotify</a
+              >
+            </li>
+            <li>
+              <a href="https://www.twitch.tv/" class="clink" target="_self"
+                >twitch</a
+              >
+            </li>
+          </ul>
+          <!-- School stuff -->
+          <ul>
+            <li>
+              <a href="https://github.com" class="clink" target="_self"
+                >github</a
+              >
+            </li>
+            <li>
+              <a href="https://canvas.cpp.edu" class="clink" target="_self"
+                >canvas</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cpp.edu/broncodirect/index.shtml"
+                class="clink"
+                target="_self"
+                >broncodirect</a
+              >
+            </li>
+            <li>
+              <a href="https://my.cpp.edu" class="clink" target="_self"
+                >mycpp</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://outlook.office365.com"
+                class="clink"
+                target="_self"
+                >outlook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" class="clink" target="_self"
+                >linkedin</a
+              >
+            </li>
+          </ul>
+          <!-- keyboard stuff/misc -->
+          <ul>
+            <li>
+              <a href="https://leetcode.com" class="clink" target="_self"
+                >leetcode</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://old.reddit.com/r/buildapcsales/"
+                class="clink"
+                target="_self"
+                >r/buildapcsales</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://old.reddit.com/r/FirefoxCSS/"
+                class="clink"
+                target="_self"
+                >r/firefoxcss</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://old.reddit.com/r/MechanicalKeyboards/"
+                class="clink"
+                target="_self"
+                >r/mechanicalkeyboards</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://old.reddit.com/r/mechmarket/"
+                class="clink"
+                target="_self"
+                >r/mechmarket</a
+              >
+            </li>
+            <li>
+              <a href="https://animekisa.tv/" class="clink" target="_self"
+                >animekisa</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
